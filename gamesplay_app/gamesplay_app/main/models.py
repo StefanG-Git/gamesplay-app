@@ -40,11 +40,14 @@ class Game(models.Model):
         validators=(
             MinValueValidator(MAX_LEVEL_MIN_VALUE),
         ),
+        verbose_name='Max Level',
         null=True,
         blank=True,
     )
 
-    image_url = models.URLField()
+    image_url = models.URLField(
+        verbose_name='Image URL',
+    )
 
     summary = models.TextField(
         null=True,

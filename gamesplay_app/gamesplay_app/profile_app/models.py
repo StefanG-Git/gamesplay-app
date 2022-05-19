@@ -22,17 +22,20 @@ class Profile(models.Model):
 
     first_name = models.CharField(
         max_length=FIRST_NAME_MAX_LENGTH,
+        verbose_name='First Name',
         null=True,
         blank=True,
     )
 
     last_name = models.CharField(
         max_length=LAST_NAME_MAX_LENGTH,
+        verbose_name='Last Name',
         null=True,
         blank=True,
     )
 
     picture = models.URLField(
+        verbose_name='Profile Picture',
         null=True,
         blank=True,
     )

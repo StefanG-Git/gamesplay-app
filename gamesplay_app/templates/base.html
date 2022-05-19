@@ -15,18 +15,14 @@
 <div id="box">
     {% has_profile as hp %}
     <header>
-
-
         <h1><a class="home" href="{% url 'index' %}">GamesPlay</a></h1>
         <nav>
-
             {% if not hp %}
                 <a href="{% url 'create profile' %}">Create Profile</a>
-
             {% else %}
                 <a href="{% url 'dashboard' %}">Dashboard</a>
-                <a href="#">Create Game</a>
-                <a href="#">Profile</a>
+                <a href="{% url 'create game' %}">Create Game</a>
+                <a href="{% url 'show profile details' %}">Profile</a>
             {% endif %}
         </nav>
     </header>

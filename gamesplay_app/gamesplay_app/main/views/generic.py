@@ -10,23 +10,7 @@ def show_home(request):
 def show_dashboard(request):
     games = Game.objects.all()
     context = {
-        'games': games
+        'games': games,
     }
 
     return render(request, 'main/dashboard.html', context)
-
-
-def create_game(request):
-    pass
-
-
-def show_game_details(request):
-    pass
-
-
-def edit_game(request):
-    pass
-
-
-def delete_game(request):
-    pass
